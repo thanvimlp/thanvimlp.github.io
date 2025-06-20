@@ -1,0 +1,182 @@
+.form-background-img {
+  height: 130vh;
+  width: 100vw;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://www.kaleanddamson.co.uk/wp-content/uploads/2024/12/Group-8049.jpg");
+  background-size: 150%;
+  background-repeat: no-repeat;
+  background-position: left 20%;
+  z-index: 0;
+  position: relative;
+
+  margin: auto;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-background-img::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background: url("https://www.kaleanddamson.co.uk//wp-content/uploads/2024/12/Mask-Group-157.png")
+    no-repeat top center;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+  background-size: cover;
+}
+
+.form-section {
+  width: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* heading part */
+.heading-part {
+  flex: 1;
+  padding: 40px;
+}
+.form-heading {
+  font-family: "Water Brush", cursive, sans-serif;
+  font-size: 70px;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 5px;
+  word-spacing: 5px;
+}
+
+/* heading subtitle */
+.form-subtitle {
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  width: 300px;
+  margin: 0 auto;
+}
+/* form part */
+.form-part {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+/* recaptcha */
+.recaptcha-wrapper {
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+
+.line-part {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  gap: 30px;
+}
+.line-part label {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+}
+.line-part p {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2;
+}
+
+/* input box */
+input[type="text"],
+input[type="email"] {
+  width: 400px;
+  padding: 10px 10px;
+  border-color: white;
+  border-radius: 5px;
+}
+
+input::placeholder {
+  font-size: 16px;
+  color: #9ba7b3;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+.input-part {
+  text-align: left;
+}
+/* check box area */
+.checkbox-part {
+  display: flex;
+}
+
+.checkbox-part input[type="checkbox"] {
+  align-self: flex-start;
+  transform: scale(1.6);
+  margin-right: 8px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.agree {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  text-align: left;
+  font-weight: 500;
+  max-width: 300px;
+  margin-left: 15px;
+}
+.agree a {
+  color: white;
+}
+
+.form-submit-btn {
+  align-items: flex-end;
+  margin: 10px auto;
+
+  padding: 10px;
+  background-color: #a2b742;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+  transition: background-color, color 0.5s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  margin-left: 20px;
+}
+
+.form-submit-btn:hover {
+  background-color: #5b691c;
+  color: white;
+}
+.form-submit-btn ion-icon {
+  color: black;
+  font-size: 16px;
+  transition: color 0.5s ease;
+}
+.form-submit-btn:hover ion-icon {
+  color: white;
+}
+
+/* removing hover when disbled  */
+.form-submit-btn:disabled,
+.form-submit-btn:disabled:hover,
+.form-submit-btn:hover ion-icon {
+  background-color: rgba(211, 211, 211, 0.276);
+  color: #888;
+  cursor: not-allowed;
+}

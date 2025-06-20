@@ -1,0 +1,113 @@
+/* - Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
+
+/* - Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 / 142
+*/
+
+.left-decor {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+.left-decor::before {
+  content: "";
+  position: absolute;
+  top: -170px;
+  left: 0;
+  width: 240px;
+  height: 100%;
+  background: url("https://www.kaleanddamson.co.uk/wp-content/uploads/2024/12/BG-onament-1.svg")
+    no-repeat left center;
+  background-size: contain;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.left-decor::after {
+  content: "";
+  position: absolute;
+  top: -170px;
+  right: 0;
+  width: 240px;
+  height: 100vh;
+  background: url("https://www.kaleanddamson.co.uk/wp-content/uploads/2024/12/BG-onament-2.svg")
+    no-repeat right center;
+  background-size: contain;
+  z-index: 0;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.supply-section {
+  width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 142px;
+  position: relative;
+}
+
+.supply-heading {
+  font-size: 64px;
+  font-family: "Water Brush", cursive, sans-serif;
+  word-spacing: 5px;
+  letter-spacing: 1.5px;
+  transform: scaleX(1.5);
+  margin: 20px auto;
+}
+
+.supply-subheading {
+  transform: scaleX(0.9);
+  font-weight: 400;
+  margin: 10px auto;
+}
+
+/* icons */
+
+.supply-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+}
+
+.supply-icon {
+  width: 100%;
+  max-width: 110px;
+  max-height: 110px;
+}
+.icon-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 180px;
+  text-align: center;
+  padding: 30px;
+  flex: 1 1 18%;
+}
+
+.icon-text {
+  font-size: 20px;
+  white-space: nowrap;
+  text-align: center;
+  font-weight: 400;
+}
+
+.supply-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 32px;
+}
+.supply-btn .btn {
+  padding: 10px;
+  font-family: "Roboto";
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.supply-btn .btn ion-icon {
+  color: black;
+  font-size: 16px;
+}

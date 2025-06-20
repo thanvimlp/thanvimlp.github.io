@@ -1,0 +1,40 @@
+.small-footer {
+  width: 100%;
+  height: 100%;
+  background-color: #313131;
+}
+.small-footer-inner {
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-left {
+  display: flex;
+  gap: 20px;
+}
+.footer-left a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-left span {
+  color: #a2b742;
+
+  font-size: 16px;
+}
+
+.footer-right p {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-weight: 500;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
