@@ -6,7 +6,7 @@
 */
 .instagram-section {
   text-align: center;
-  width: 1000px;
+  max-width: 1000px;
   margin: 0 auto;
   z-index: 1;
 }
@@ -149,4 +149,23 @@
   z-index: 0;
   opacity: 1;
   pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .insta-grid {
+    grid-template-columns: 1fr 1fr;
+    padding: 16px;
+  }
+  .decor::after,
+  .decor::before {
+    display: none;
+  }
+  .insta-heading {
+    font-size: 32px;
+    margin-bottom: 16px;
+    margin-top: 48px;
+  }
+  .instagram-section .buttons {
+    margin-bottom: 64px;
+  }
 }

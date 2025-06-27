@@ -6,7 +6,7 @@
 */
 .produce-section {
   margin: 142px auto;
-  width: 1030px;
+  max-width: 1030px;
 }
 
 .produce-heading {
@@ -131,4 +131,36 @@
   font-size: 28px;
   letter-spacing: 0.2px;
   z-index: 2;
+}
+
+@media (max-width: 1400px) {
+  /* .card {
+    max-height: 300px;
+    max-width: 300px;
+  } */
+}
+@media (max-width: 1030px) {
+  /* .card {
+    height: 325px;
+    width: 325px;
+  } */
+}
+
+@media (max-width: 767px) {
+  .card {
+    max-height: 300px;
+    max-width: 300px;
+  }
+  .produce-section {
+    margin: 64px auto;
+  }
+  .produce-section h2 {
+    font-size: 36px;
+    font-weight: 600;
+  }
+  .produce-subheading {
+    font-size: 14px;
+    max-width: 90%;
+    white-space: normal;
+  }
 }

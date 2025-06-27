@@ -31,19 +31,25 @@ function Hero() {
     >
       <div className="hero-overlay">
         <div className="hero-text">
-          <h1>
-            Suppliers of the <br /> finest produce
-          </h1>
+          <h1>Suppliers of the finest produce</h1>
           <p>Cambridgeshire’s wholesale fresh fruit and vegetable supplier.</p>
           <div className="hero-buttons">
-            <a href="#" className="btn btn-green">
-              <span>Become a customer</span>
-              <ion-icon name="chevron-forward-outline"></ion-icon>
-            </a>
-            <a href="#" className="btn btn-grey">
-              <span>Get in touch</span>
-              <ion-icon name="chevron-forward-outline"></ion-icon>
-            </a>
+            <div className="top-button">
+              <a href="#" className="btn btn-green">
+                <span>Become a customer</span>
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+              </a>
+            </div>
+            <div className="bottom-buttons">
+              <a href="#" className="btn-order-mobile">
+                <span>Order online</span>
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+              </a>
+              <a href="#" className="btn btn-grey">
+                <span>Get in touch</span>
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+              </a>
+            </div>
           </div>
         </div>
 

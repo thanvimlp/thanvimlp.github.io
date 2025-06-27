@@ -53,6 +53,7 @@
   font-weight: 400;
   font-style: normal;
   letter-spacing: 5px;
+  padding: 32px;
 }
 .hero-text p {
   font-size: 20px;
@@ -112,4 +113,74 @@
   padding-left: 24px;
   margin-bottom: -128px;
   padding-top: 64px;
+}
+
+.btn-order-mobile {
+  text-decoration: none;
+  color: rgb(49, 49, 49);
+  font-weight: 500;
+  background-color: #c5c5c5;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  display: none;
+}
+.btn-order-mobile ion-icon {
+  color: rgb(49, 49, 49);
+  font-size: 16px;
+}
+
+.bottom-buttons {
+  display: flex;
+  gap: 16px;
+}
+.top-button {
+  display: inline-flex;
+}
+@media (max-width: 767px) {
+  /* make input full width, smaller padding/margin */
+  .hero-overlay {
+    padding: 96px 12px;
+  }
+  .hero-text h1 {
+    padding: 16px;
+    font-size: 36px;
+    font-weight: 600;
+  }
+  .hero-text p {
+    padding-left: 12px;
+    font-size: 16px;
+  }
+  .slider-arrows {
+    display: none;
+  }
+  .hero-buttons {
+    padding-left: 8px;
+    flex-direction: column;
+  }
+  .btn-order-mobile {
+    display: inline-flex;
+  }
+  .hero-section {
+    height: 110vh;
+  }
+  .hero-section::after {
+    bottom: -30px;
+  }
+}
+
+/* Small phones (portrait) */
+@media (max-width: 480px) {
+  /* smallest font sizes, hide extra icons/images */
+  .hero-text h1 {
+    margin-top: 48px;
+  }
+  .hero-section {
+    background-size: cover;
+    height: 100%;
+  }
 }

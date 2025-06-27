@@ -9,7 +9,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 999;
 
   display: flex;
   justify-content: space-between;
@@ -176,4 +176,163 @@ ion-icon {
 .btn-green:hover,
 .btn-green:active {
   background-color: rgb(117, 131, 88);
+}
+
+@media (max-width: 1242px) {
+  .nav-links {
+    gap: 10px;
+  }
+  .nav-contact {
+    gap: 10px;
+  }
+}
+
+.menu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+  z-index: 1001;
+  transition: trasnform 0.3s ease;
+}
+.menu-toggle ion-icon {
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  transition: transform 0.4s ease;
+  will-change: transform;
+  display: inline-block;
+}
+
+/* Animate on toggle */
+.menu-toggle.open ion-icon {
+  transform: translate3d(0, 0, 0) rotate(90deg);
+}
+
+.menu-overlay-grad {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom left,
+    rgba(0, 0, 0, 0.3),
+    transparent 60%
+  );
+  z-index: 0;
+  pointer-events: none;
+  display: none;
+}
+
+.mobile-menu-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 80vw;
+  max-width: 400px;
+  background-color: #61666b;
+  transform: translateY(100%);
+
+  z-index: 1000;
+  padding: 32px 24px;
+  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+  gap: 16px;
+}
+.mobile-menu-panel.show {
+  transform: translateY(0);
+}
+
+.mobile-dropdown-menu {
+  display: none;
+}
+
+/* Mobile nav links */
+.nav-links.mobile {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  list-style: none;
+}
+/* mobile nav contacts */
+.nav-contact.mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.nav-contact.mobile .contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.nav-contact.mobile .contact-item a {
+  display: inline-block;
+  color: white;
+  font-size: 16px;
+}
+.mobile-dropdown-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  padding-left: 1rem;
+  display: block;
+}
+.mobile-dropdown-menu.open {
+  max-height: 500px;
+}
+
+.mobile-dropdown-menu li {
+  list-style: none;
+  padding: 10px 0;
+}
+.nav-contact.mobile li.active > a ion-icon {
+  display: none;
+}
+@media (max-width: 1191px) {
+  .nav-links,
+  .nav-contact {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .menu-overlay-grad {
+    display: block;
+  }
+}
+/* Tablets and below */
+@media (max-width: 991px) {
+  /* adjust layout, stack elements, resize text */
+}
+/* Phones (landscape) and below */
+@media (max-width: 767px) {
+  /* make input full width, smaller padding/margin */
+  .logo-img {
+    height: 16px;
+  }
+  .navbar {
+    padding: 20px 25px;
+  }
+  .mobile-menu-panel {
+    height: 100%;
+    width: 100vw;
+  }
+}
+
+/* Small phones (portrait) */
+@media (max-width: 480px) {
+  /* smallest font sizes, hide extra icons/images */
 }

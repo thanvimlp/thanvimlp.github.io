@@ -5,6 +5,7 @@
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 / 142
 */
 .testimonial-section {
+  background-color: white;
   height: 110vh;
   width: 100vw;
   background-image: linear-gradient(
@@ -152,4 +153,74 @@
   content: "”";
   bottom: -11px;
   right: 22px;
+}
+
+/* Phones (landscape) and below */
+@media (max-width: 767px) {
+  /* make input full width, smaller padding/margin */
+  .testi-heading {
+    margin-top: 30px;
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  .testimonial-section {
+    height: 120vh;
+    width: 100%;
+    background-size: 150%;
+  }
+  .testimonial-section::before {
+    top: -1px;
+    width: 100%;
+  }
+  .testimonial p {
+    font-size: 16px;
+  }
+  .testimonials {
+    gap: 48px;
+  }
+  .testimonial-section::after {
+    bottom: -1px;
+  }
+  .customer {
+    font-size: 12px;
+  }
+}
+
+/* Small phones (portrait) */
+@media (max-width: 480px) {
+  /* smallest font sizes, hide extra icons/images */
+  .testimonials .testimonial:nth-child(2),
+  .testimonials .testimonial:nth-child(1) {
+    display: none;
+  }
+  .testimonials .testimonial:nth-child(3) p {
+    font-size: 14px;
+    max-width: 80%;
+    padding-left: 50px;
+  }
+  .testimonials .testimonial:nth-child(3) .customer {
+    padding-left: 50px;
+  }
+  .testimonial:nth-child(3)::before {
+    top: -25px;
+    left: 25px;
+  }
+  .testimonial:nth-child(3)::after {
+    bottom: -80px;
+    right: 100px;
+  }
+  .testimonial-section {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+  .testi-heading {
+    font-size: 32px;
+  }
+  .testimonial-section {
+    height: 60vh;
+    width: 100%;
+    background-size: 170%;
+  }
 }

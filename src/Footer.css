@@ -38,3 +38,18 @@
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 767px) {
+  .footer-left span {
+    display: none;
+  }
+  .footer-left a {
+    font-size: 12px;
+  }
+  .small-footer-inner {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footer-left {
+    flex-direction: column;
+  }
+}

@@ -129,3 +129,38 @@
   font-weight: 500;
   padding: 0 8px;
 }
+
+@media (max-width: 767px) {
+  .fullfooter-section {
+    flex-direction: column;
+    padding: 30px;
+  }
+  .fullfooter-part h3::after {
+    width: 700px;
+  }
+}
+@media (max-width: 730px) {
+  .fullfooter-part h3::after {
+    width: 600px;
+  }
+}
+@media (max-width: 630px) {
+  .fullfooter-part h3::after {
+    width: 500px;
+  }
+}
+@media (max-width: 530px) {
+  .fullfooter-part h3::after {
+    width: 450px;
+  }
+}
+@media (max-width: 480px) {
+  .fullfooter-part h3::after {
+    width: 400px;
+  }
+}
+@media (max-width: 431px) {
+  .fullfooter-part h3::after {
+    width: 350px;
+  }
+}

@@ -41,7 +41,7 @@
 }
 
 .supply-section {
-  width: 1000px;
+  max-width: 1000px;
   margin: 0 auto;
   margin-bottom: 142px;
   position: relative;
@@ -110,4 +110,51 @@
 .supply-btn .btn ion-icon {
   color: black;
   font-size: 16px;
+}
+/* Phones (landscape) and below */
+@media (max-width: 767px) {
+  /* make input full width, smaller padding/margin */
+  .supply-section {
+    margin-bottom: 128px;
+  }
+  .supply-heading {
+    font-size: 24px;
+  }
+  .supply-subheading {
+    white-space: normal;
+    font-size: 14px;
+  }
+  .supply-icons {
+    grid-template-columns: 240px 240px;
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+  }
+  .supply-icons .icon-element:last-child {
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+  .icon-element {
+    align-self: center;
+  }
+  .left-decor::before {
+    width: 100px;
+  }
+  .left-decor::after {
+    width: 100px;
+    top: 34px;
+  }
+}
+
+@media (max-width: 567px) {
+  .supply-icons {
+    grid-template-columns: 240px;
+  }
+  .left-decor::before {
+    top: -400px;
+  }
+}
+/* Small phones (portrait) */
+@media (max-width: 480px) {
+  /* smallest font sizes, hide extra icons/images */
 }
